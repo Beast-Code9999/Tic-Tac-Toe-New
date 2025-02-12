@@ -24,3 +24,9 @@ const DisplayController = (function DisplayController() {
         init: init,
     }
 })();
+
+
+window.addEventListener('load', function() {
+    GameBoard.init();
+    DisplayController.init();
+});
