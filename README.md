@@ -45,10 +45,43 @@ A JavaScript-based Tic Tac Toe game with a clean UI and logic-driven gameplay. B
 ## 📜 Pseudocode Structure
 
 1 - Gameboard
-- 
+- Create a 3x3 array to represent the board
+- Functions to get/set marks on the board
+- Function to check if position is available
+- Function to check if board is full
+- Function to reset the board
+- Function to get current board state
 
+2 - Player Factory
+- Create player with name and mark (X or O)
+- Function to get player's name and mark
+- Function to make a move (human will use UI, AI will use algorithm)
+
+3 - AI Player Factory
+- Implement minimax algorithm with difficulty levels
+- Easy: Random moves
+- Medium: Mix of random and smart moves
+- Hard: Mostly optimal moves
+- Impossible: Always optimal moves (pure minimax)
+
+4 - GameController Module (IIFE)
+- Track current player
+- Switch turns
+- Track game state (in progress, win, tie)
+- Check for win conditions
+- Reset game
+- Start game
+
+5 - DisplayController Module (IIFE)
+- Render board to DOM
+- Handle UI interactions
+- Update display based on game state
+- Show win/tie messages
+- Handle player name inputs
+- Control difficulty selection
 
 ## 📜 Pseudocode Flow
+
 
 
 ---
