@@ -24,7 +24,6 @@ A JavaScript-based Tic Tac Toe game with a clean UI and logic-driven gameplay. B
 
 ---
 
-
 ## 🧠 Understanding the problem
 
 1 - We need to create a Tic-Tac-Toe game with:
@@ -35,6 +34,14 @@ A JavaScript-based Tic Tac Toe game with a clean UI and logic-driven gameplay. B
 - Minimal global code
 - AI with differenct difficulty levels
 
+2 - The flow
+- Create working console game
+- Add DOM interaction after
+- Allow player to input names
+- Include start and restart functionality
+- Display results
+
+---
 
 ## 📜 Pseudocode
 
