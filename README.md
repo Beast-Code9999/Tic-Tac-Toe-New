@@ -1,6 +1,6 @@
 # 🖼️ Project overview
 
-A JavaScript-based Tic Tac Toe game with a clean UI and logic-driven gameplay - Built as part of [The Odin Project](https://www -theodinproject -com/) JavaScript curriculum to practice factory functions and module patterns
+A JavaScript-based Tic Tac Toe game with a clean UI and logic-driven gameplay. Built as part of [The Odin Project](https://www.theodinproject.com/) JavaScript curriculum to practice factory functions and module patterns
 
 ---
 
@@ -83,59 +83,59 @@ A JavaScript-based Tic Tac Toe game with a clean UI and logic-driven gameplay - 
 ## 📜 Pseudocode Flow
 
 FUNCTION startGame:
-  1 - Get player name and AI difficulty level
-  2 - Initialize empty 3x3 game board
-  3 - Render board to the DOM
-  4 - Set current player to human (X)
-  5  Wait for player input
+  1. Get player name and AI difficulty level
+  2. Initialize empty 3x3 game board
+  3. Render board to the DOM
+  4. Set current player to human (X)
+  5. Wait for player input
 
 FUNCTION handlePlayerTurn(row, col):
-  1 - IF position is valid AND game not over:
-     a - Place current player's mark (X/O)
-     b - Update display
-     c - Check for win or tie
-     d - IF game over:
-        i - Show result and restart button
-     e - ELSE:
-        i - Switch players
-        ii - IF AI's turn:
+  1. IF position is valid AND game not over:
+     a. Place current player's mark (X/O)
+     b. Update display
+     c. Check for win or tie
+     d. IF game over:
+        i. Show result and restart button
+     e. ELSE:
+        i. Switch players
+        ii. IF AI's turn:
             - Calculate move based on difficulty
             - Make AI move after short delay
 
 FUNCTION checkForWin():
-  1 - Check rows, columns, and diagonals for three matching marks
-  2 - Return winner mark or null
+  1. Check rows, columns, and diagonals for three matching marks
+  2. Return winner mark or null
 
 FUNCTION checkForTie():
-  1 - IF board full AND no winner:
-     a - Return true
-  2 - ELSE:
-     a - Return false
+  1. IF board full AND no winner:
+     a. Return true
+  2. ELSE:
+     a. Return false
 
 FUNCTION getBestMove(difficulty):
-  1 - IF easy: 
+  1. IF easy: 
      - Return random empty position
-  2 - IF medium: 
+  2. IF medium: 
      - 50% random / 50% minimax (depth=1)
-  3 - IF hard: 
+  3. IF hard: 
      - 20% random / 80% minimax (depth=3)
-  4 - IF impossible: 
+  4. IF impossible: 
      - Full minimax algorithm
 
 FUNCTION minimax(board, depth, isMaximizing):
-  1 - IF terminal state OR depth limit reached:
+  1. IF terminal state OR depth limit reached:
      - Return score
-  2 - IF maximizing (AI's turn):
+  2. IF maximizing (AI's turn):
      - Find highest-scoring move
-  3 - ELSE (human's turn):
+  3. ELSE (human's turn):
      - Find lowest-scoring move
-  4 - Return best move or score
+  4. Return best move or score
 
 FUNCTION restart:
-  1 - Reset board and game state
-  2 - Render clean board
-  3 - Set current player to human
-  4 - Wait for player input
+  1. Reset board and game state
+  2. Render clean board
+  3. Set current player to human
+  4. Wait for player input
 
 ---
 
