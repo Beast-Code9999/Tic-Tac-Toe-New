@@ -20,7 +20,6 @@ A JavaScript-based Tic Tac Toe game with a clean UI and logic-driven gameplay. B
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- 
 
 ---
 
@@ -43,8 +42,13 @@ A JavaScript-based Tic Tac Toe game with a clean UI and logic-driven gameplay. B
 
 ---
 
-## 📜 Pseudocode
+## 📜 Pseudocode Structure
 
+1 - Gameboard
+- 
+
+
+## 📜 Pseudocode Flow
 
 
 ---
