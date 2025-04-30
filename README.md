@@ -83,51 +83,59 @@ A JavaScript-based Tic Tac Toe game with a clean UI and logic-driven gameplay. B
 ## 📜 Pseudocode Flow
 
 FUNCTION startGame:
-   1. Get player names
-   2. Get AI difficulty level
-   3. Initialize board
-   4. Render initial board
-   5. Set current player to X
-   6. Wait for player input
+  1. Get player name and AI difficulty level
+  2. Initialize empty 3x3 game board
+  3. Render board to the DOM
+  4. Set current player to human (X)
+  5. Wait for player input
 
-FUNCTION handlePlayerTurn(position):
-   1. IF position is valid AND game is not over:
-      a. Update board with current player's mark
-      b. Render updated board
-      c. Check for win or tie
-      d. IF game is over:
-         i. Display result
-         ii. Offer restart
-      e. ELSE:
-         i. Switch to next player
-         ii. IF next player is AI:
-            1. Calculate AI move based on difficulty
-            2. Make AI move (recursively call handlePlayerTurn)
+FUNCTION handlePlayerTurn(row, col):
+  1. IF position is valid AND game not over:
+     a. Place current player's mark (X/O)
+     b. Update display
+     c. Check for win or tie
+     d. IF game over:
+        i. Show result and restart button
+     e. ELSE:
+        i. Switch players
+        ii. IF AI's turn:
+            - Calculate move based on difficulty
+            - Make AI move after short delay
 
 FUNCTION checkForWin():
-   1. Check all rows, columns, and diagonals for three matching marks
-   2. Return winner mark or null
+  1. Check rows, columns, and diagonals for three matching marks
+  2. Return winner mark or null
 
 FUNCTION checkForTie():
-   1. IF board is full AND no winner:
-      a. Return true
-   2. ELSE:
-      a. Return false
+  1. IF board full AND no winner:
+     a. Return true
+  2. ELSE:
+     a. Return false
 
-FUNCTION minimax(board, depth, isMaximizing, difficulty):
-   1. IF game is over OR depth reaches difficulty limit:
-      a. Return score based on outcome
-   2. IF isMaximizing:
-      a. Find best move for AI
-   3. ELSE:
-      a. Find best move for opponent
-   4. Return best move or score based on context
+FUNCTION getBestMove(difficulty):
+  1. IF easy: 
+     - Return random empty position
+  2. IF medium: 
+     - 50% random / 50% minimax (depth=1)
+  3. IF hard: 
+     - 20% random / 80% minimax (depth=3)
+  4. IF impossible: 
+     - Full minimax algorithm
+
+FUNCTION minimax(board, depth, isMaximizing):
+  1. IF terminal state OR depth limit reached:
+     - Return score
+  2. IF maximizing (AI's turn):
+     - Find highest-scoring move
+  3. ELSE (human's turn):
+     - Find lowest-scoring move
+  4. Return best move or score
 
 FUNCTION restart:
-   1. Reset board
-   2. Reset game state
-   3. Render clean board
-   4. Start new game with same players
+  1. Reset board and game state
+  2. Render clean board
+  3. Set current player to human
+  4. Wait for player input
 
 ---
 
